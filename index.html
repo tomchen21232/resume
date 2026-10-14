@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>楊敏琪 Mikie Yang｜專案企劃 / 活動行銷 / 社群編輯</title>
+<meta name="description" content="楊敏琪 Mikie Yang － 專案企劃 / 活動行銷 / 社群編輯。喜歡上山下海愛旅行，帶著充滿冒險的精神，走進了行銷的世界！">
+<meta property="og:title" content="楊敏琪 Mikie Yang｜專案企劃 / 活動行銷 / 社群編輯">
+<meta property="og:description" content="活動行銷 × 短影音 × 社群經營，累積 250+ 支短影音、15+ 場大型展覽經驗。">
+<meta property="og:image" content="https://images.cakeresume.com/O6gRaP/min-chi-yang/0a9e023b-9e67-4b8f-a37c-597d237d5015.png">
+<!-- 不想被 Google 搜尋到：把下一行前後的註解符號刪掉即可 -->
+<!-- <meta name="robots" content="noindex, nofollow"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ 想改配色、字體、寬度，只要改這一區 ============ */
+  :root {
+    --accent: #2e406f;      /* 主色（深藍）：標題、重點數字 */
+    --accent-soft: #eef1f8; /* 淡藍底：數字卡片、標籤 */
+    --highlight: #b62424;   /* 強調色（紅）：只用在一句話簡介 */
+    --text: #2b2b2b;        /* 內文顏色 */
+    --muted: #6b6f78;       /* 次要文字 */
+    --line: #e4e6ec;        /* 分隔線 */
+    --bg: #ffffff;
+    --max-width: 880px;     /* 頁面最大寬度 */
+    --radius: 12px;
+  }
+  /* ============================================================ */
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  ul { margin: 0; padding-left: 1.2em; }
+  li { margin: 4px 0; }
+  h1, h2, h3, h4, p { margin: 0; }
+
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  section.first { border-top: none; padding-top: 36px; }
+  h2 {
+    font-size: 1.35rem; color: var(--accent); margin-bottom: 22px;
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  }
+  h2 small { font-size: .85rem; font-weight: 400; color: var(--muted); letter-spacing: .04em; }
+  h3 { font-size: 1.05rem; color: var(--text); margin-bottom: 6px; }
+  .lead { color: var(--muted); margin: -8px 0 22px; }
+
+  /* ---- Hero ---- */
+  .hero { display: flex; gap: 28px; align-items: center; }
+  .hero img.avatar { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; flex: none; border: 3px solid var(--accent-soft); }
+  .hero h1 { font-size: 1.9rem; line-height: 1.3; color: var(--text); }
+  .hero .role { color: var(--accent); font-weight: 500; margin: 2px 0 10px; }
+  .hero .tagline { color: var(--highlight); font-weight: 700; margin-bottom: 4px; }
+  .hero .intro { color: var(--muted); font-size: .95rem; }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 14px; font-size: .95rem; }
+  .contact a, .contact span { color: var(--text); text-decoration: none; }
+  .contact a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* ---- Photo strip ---- */
+  .strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
+  .strip img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); background: var(--accent-soft); }
+
+  /* ---- Stats ---- */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+  .stat { background: var(--accent-soft); border-radius: var(--radius); padding: 16px 18px; }
+  .stat b { display: block; font-size: 1.8rem; line-height: 1.2; color: var(--accent); }
+  .stat span { display: block; font-size: .9rem; margin-top: 4px; }
+  .stat em { display: block; font-style: normal; font-size: .8rem; color: var(--muted); margin-top: 2px; }
+
+  /* ---- Columns ---- */
+  .cols-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .cols-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .cols-3 h3, .cols-2 h3.sec { color: var(--accent); }
+  .plain { list-style: none; padding: 0; }
+  .plain li { margin: 6px 0; }
+  .edu p { margin-bottom: 10px; }
+  .edu p span { display: block; color: var(--muted); font-size: .9rem; }
+
+  .course { display: grid; grid-template-columns: 240px 1fr; gap: 28px; align-items: center; }
+  .course img { width: 100%; border-radius: var(--radius); }
+  .course li { margin-bottom: 12px; list-style: none; }
+  .course ul { padding: 0; }
+  .course li span { display: block; color: var(--muted); font-size: .92rem; }
+
+  /* ---- Work experience ---- */
+  .job { padding: 0 0 26px 20px; border-left: 2px solid var(--line); position: relative; margin-left: 4px; }
+  .job:last-child { padding-bottom: 0; }
+  .job::before { content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+  .job h3 { font-size: 1.1rem; margin-bottom: 0; }
+  .job .meta { color: var(--muted); font-size: .92rem; margin-bottom: 8px; }
+  .job li { font-size: .96rem; }
+
+  /* ---- Video / cards ---- */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card { display: flex; gap: 16px; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; }
+  .card img { width: 96px; height: 130px; object-fit: cover; border-radius: 8px; flex: none; background: var(--accent-soft); }
+  .card h3 { font-size: 1rem; }
+  .card ul { font-size: .9rem; color: var(--muted); padding-left: 1.1em; }
+  .card .num { margin-top: 8px; font-size: .88rem; font-weight: 700; color: var(--accent); line-height: 1.6; }
+  a.card-link { text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
+  a.card-link:hover { box-shadow: 0 6px 18px rgba(46,64,111,.12); transform: translateY(-2px); }
+
+  .film { display: grid; grid-template-columns: 1fr 1.6fr; gap: 28px; align-items: start; margin-top: 36px; }
+  .film h3 { font-size: 1.1rem; color: var(--accent); margin-bottom: 10px; }
+  .film p { font-size: .94rem; margin-bottom: 10px; }
+  .film ul { font-size: .92rem; }
+  .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #000; }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* ---- Product ---- */
+  .product { display: flex; gap: 18px; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
+  .product:hover { box-shadow: 0 6px 18px rgba(46,64,111,.12); transform: translateY(-2px); }
+  .product img { width: 110px; height: 110px; object-fit: cover; border-radius: 8px; flex: none; background: var(--accent-soft); }
+  .product h3 { color: var(--accent); }
+  .product p { font-size: .9rem; color: var(--muted); }
+  .product .num { margin-top: 6px; font-size: .88rem; font-weight: 700; color: var(--text); }
+
+  /* ---- Graphics gallery ---- */
+  .gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px 28px; }
+  .gal h3 { color: var(--accent); font-size: 1.05rem; }
+  .gal p { font-size: .92rem; color: var(--muted); margin-bottom: 12px; }
+  .gal .imgs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .gal .imgs img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; background: var(--accent-soft); }
+
+  /* ---- Campaign ---- */
+  .campaign h3 { font-size: 1rem; color: var(--accent); margin-bottom: 8px; }
+  .campaign p { margin-bottom: 10px; font-size: .96rem; }
+  .highlight { background: var(--accent-soft); border-radius: var(--radius); padding: 12px 16px; font-size: .95rem; }
+  .btn { display: inline-block; margin-top: 14px; padding: 9px 20px; background: var(--accent); color: #fff; border-radius: 999px; text-decoration: none; font-size: .92rem; }
+  .btn:hover { opacity: .88; }
+
+  /* ---- Brand partnership ---- */
+  .partner img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius); margin-bottom: 12px; background: var(--accent-soft); }
+  .partner h3 { margin-bottom: 0; }
+  .partner h4 { font-size: .98rem; color: var(--accent); margin-bottom: 8px; font-weight: 700; }
+  .partner p { font-size: .93rem; }
+  strong.n { color: var(--accent); }
+
+  footer { text-align: center; padding: 40px 20px 56px; border-top: 1px solid var(--line); color: var(--muted); }
+  footer a { color: var(--accent); }
+
+  /* ---- Mobile ---- */
+  @media (max-width: 720px) {
+    .hero { flex-direction: column; text-align: center; }
+    .contact { justify-content: center; }
+    .cols-3, .cols-2, .cards, .film { grid-template-columns: 1fr; }
+    .course { grid-template-columns: 1fr; }
+    .gal-grid { grid-template-columns: 1fr; }
+    .strip { gap: 6px; }
+    section { padding: 34px 0; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ========== 基本資料 ========== -->
+<header class="wrap">
+  <section class="first">
+    <div class="hero">
+      <img class="avatar" src="https://images.cakeresume.com/O6gRaP/min-chi-yang/0a9e023b-9e67-4b8f-a37c-597d237d5015.png" alt="楊敏琪 Mikie Yang 大頭照">
+      <div>
+        <h1>楊敏琪 Mikie Yang</h1>
+        <p class="role">專案企劃 / 活動行銷 / 社群編輯</p>
+        <p class="tagline">喜歡上山下海愛旅行，帶著充滿冒險的精神，走進了行銷的世界！</p>
+        <p class="intro">冒險、觀察和嘗試是我生活的一部分，更是我行銷工作的日常。我喜歡嘗試新方法，總是用行動證明「靈感與熱情」是最好的行銷策略。</p>
+        <div class="contact">
+          <span>📍 Taipei, Taiwan</span>
+          <a href="mailto:minchiy77@gmail.com">✉️ minchiy77@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="strip">
+      <img src="https://images.cakeresume.com/O6gRaP/mikieyang/d9b18040-7647-4331-ab42-f50f59ddbeaf.png" alt="活動現場照片 1" loading="lazy">
+      <img src="https://images.cakeresume.com/O6gRaP/mikieyang/a9a9a402-ffcb-4f5a-b9a8-1e90c8aee939.png" alt="活動現場照片 2" loading="lazy">
+      <img src="https://images.cakeresume.com/O6gRaP/mikieyang/8fdbcd3c-49df-4579-9c6a-c5d2c8340b75.png" alt="活動現場照片 3" loading="lazy">
+    </div>
+  </section>
+</header>
+
+<main class="wrap">
+
+  <!-- ========== 實戰經歷 ========== -->
+  <section>
+    <h2>實戰經歷 <small>Practical Experience</small></h2>
+    <div class="stats">
+      <div class="stat"><b>15+</b><span>大型展覽</span><em>美展 / 旅展 / 戶外用品展 / 醫療展</em></div>
+      <div class="stat"><b>10+</b><span>開幕活動</span><em>診所 / 律師事務所 / 形象店</em></div>
+      <div class="stat"><b>10+</b><span>百人餐敘活動</span><em>集團春酒 / VIP 餐敘 / 醫療晚宴</em></div>
+      <div class="stat"><b>5+</b><span>大型講座</span><em>旅遊推介會 / 醫師講座</em></div>
+      <div class="stat"><b>5 支</b><span>產品企劃</span><em>最佳半年銷售 1.2 萬支 / 業績超過 3 千萬</em></div>
+      <div class="stat"><b>250+</b><span>短影音剪輯</span><em>最高 70 萬瀏覽</em></div>
+      <div class="stat"><b>30%</b><span>LINE 推播開封率</span><em>最高</em></div>
+      <div class="stat"><b>1.5%</b><span>社群貼文互動率</span><em>平均</em></div>
+    </div>
+  </section>
+
+  <!-- ========== 學歷 / 技能 / 工具 ========== -->
+  <section>
+    <div class="cols-3">
+      <div class="edu">
+        <h2>學歷背景 <small>Education</small></h2>
+        <p>國立高雄餐旅大學 餐旅暨會展行銷管理系<span>2011 – 2015</span></p>
+        <p>國立基隆海事 觀光事業科<span>2009 – 2011</span></p>
+      </div>
+      <div>
+        <h2>專業技能 <small>Skills</small></h2>
+        <ul class="plain">
+          <li>FB / IG / LINE / YT 社群內容經營</li>
+          <li>短影音腳本企劃 / 剪輯</li>
+          <li>KOL 異業合作開發</li>
+          <li>行銷檔期活動規劃 / 執行</li>
+          <li>產品行銷企劃</li>
+        </ul>
+      </div>
+      <div>
+        <h2>擅長工具 <small>Tools</small></h2>
+        <ul class="plain">
+          <li>Word、Excel、PowerPoint</li>
+          <li>Canva 視覺設計</li>
+          <li>CapCut 影音剪輯</li>
+          <li>Meta Business Suite 社群後台操作</li>
+          <li>Notion 協作管理</li>
+          <li>ChatGPT、Gemini（NotebookLM）等 AI 工具</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 專業進修 ========== -->
+  <section>
+    <div class="course">
+      <img src="https://images.cakeresume.com/O6gRaP/mikieyang/443bda74-0476-4e00-9f8a-d67e95b948b9.png" alt="專業進修" loading="lazy">
+      <div>
+        <h2>專業進修 <small>Courses &amp; Certifications</small></h2>
+        <ul>
+          <li><strong>AI 應用與數位工具實戰課程</strong>（進修中）
+            <span>學習運用生成式 AI 進行資料研究、企劃發想、文案優化、簡報製作及工作流程整合。</span></li>
+          <li><strong>外語領隊人員</strong>（受訓中）
+            <span>具備旅遊規劃、流程管理、跨文化溝通及高壓情境應變能力。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 工作經歷 ========== -->
+  <section>
+    <h2>工作經歷 <small>Work Experience</small></h2>
+
+    <article class="job">
+      <h3>自由接案與個人品牌經營</h3>
+      <p class="meta">自由行銷工作者 ｜ 2025/09 – 至今</p>
+      <ul>
+        <li>經營個人社群，結合旅遊與行銷經驗，產出具情感共鳴的短影音內容，提升觀看留存、粉絲互動及個人品牌辨識度</li>
+        <li>為品牌進行社群規劃與行銷提案，負責社群視覺、時事文案撰寫及粉絲互動管理，並透過數據分析持續優化內容策略</li>
+        <li>參與線下活動之流程規劃與現場執行，透過良好臨場應變能力與群眾溝通技巧，確保活動順利推進並達成預期目標</li>
+        <li>積極投入旅遊及數位行銷進修，參與外語領隊及 AI 數位工具實戰課程，強化流程管理、臨場應變與行銷企劃效率</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>旺群購物（紐西蘭台灣食品進口商）</h3>
+      <p class="meta">市場行銷 ｜ 2025/03 – 2025/09（簽證時間到期）</p>
+      <ul>
+        <li>規劃多檔節日行銷專案（如愚人節、母親節、週年慶），負責主題發想、活動設計與整體流程規劃</li>
+        <li>製作視覺圖像素材含商品主圖、節慶 KV、直播預告、官網橫幅等，並撰寫貼近時事、吸睛又有流量的社群內容</li>
+        <li>發想與撰寫短影音腳本，獨立完成拍攝畫面與素材擷取，並協助後製剪輯與字幕腳本撰寫</li>
+        <li>參與直播節目企劃，協助設計流程與腳本，協助官網 UX 優化，包含首頁連結設計、下單教學、配送流程、聯繫客服方式等頁面圖文</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>星醫美學集團</h3>
+      <p class="meta">行銷企劃 ｜ 2020/07 – 2025/02</p>
+      <ul>
+        <li>規劃與執行多間醫美門市的行銷檔期專案，整合線上社群與線下活動，提高到店轉換率</li>
+        <li>負責開幕活動、品牌展覽與其他異業合作專案（新竹馬拉松、台北時裝週），提升品牌曝光與區域聲量</li>
+        <li>規劃新品上市策略，包含產品行銷策略、產品命名、產品設計、推廣文宣等</li>
+        <li>製作影音行銷腳本，與拍攝剪輯團隊協作，產出品牌宣傳短片</li>
+        <li>撰寫促銷圖文、社群貼文，強化品牌語調與行銷效益</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>五福旅行社</h3>
+      <p class="meta">專案企劃 ｜ 2017/09 – 2019/03</p>
+      <ul>
+        <li>結合各國觀光局資源，協助整合台灣市場推廣專案，規劃媒體曝光、旅展活動等社群行銷執行</li>
+        <li>撰寫合作提案，與觀光局、航空公司、媒體、活動廠商等多方溝通協調</li>
+        <li>執行旅遊品牌推廣活動，如記者會、體驗會、B2B 推廣活動等，強化品牌印象</li>
+        <li>管理線上廣告投放排程與內容，追蹤廣告成效並提供數據報告</li>
+        <li>協助展覽攤位設計與現場運營、銷售規劃，並提升現場互動率與品牌形象</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <h3>挑替創意設計公司</h3>
+      <p class="meta">行銷企劃 ｜ 2015/09 – 2016/06</p>
+      <ul>
+        <li>負責網路寵物零食品牌的行銷企劃，從產品定位、內容製作到曝光推廣全流程參與</li>
+        <li>規劃並執行大型行銷專案與實體活動（記者會、產品上映），整合資源達成品牌曝光與銷售目標</li>
+        <li>撰寫影片腳本與分鏡，並實際參與拍攝現場，確保視覺呈現與品牌一致</li>
+        <li>統整整體品牌視覺風格，協同設計師完成官網、社群與活動視覺統一性</li>
+        <li>運用媒體與廣告資源（如 KOL 合作、社群投放、新聞露出），提升品牌聲量與轉換率</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- ========== 影音作品 ========== -->
+  <section>
+    <h2>影音作品 <small>Video Production</small></h2>
+    <p class="lead">不僅經營自媒體，也承接品牌影音企劃與剪輯案，<strong class="n">累積製作超過 250 支短影音</strong>，<strong class="n">超過 50 支破萬觀看</strong>。具備腳本發想、拍攝製作與剪輯能力，能依據品牌目標與受眾，靈活製作具有吸引力與轉換力的影音內容。</p>
+
+    <div class="cards">
+      <a class="card card-link" href="https://www.instagram.com/reel/DALQ_TDAmyQ/" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/6302f5f5-5c48-455b-b73b-b5f3489f108a.png" alt="旅遊影音紀錄《泳渡日月潭》" loading="lazy">
+        <div>
+          <h3>旅遊影音紀錄《泳渡日月潭》</h3>
+          <ul><li>構思腳本並規劃鏡頭畫面</li><li>實地拍攝與取景</li><li>影片剪輯與後製</li></ul>
+          <p class="num">觀看 705,000+ ｜ 分享 11,000+ ｜ 收藏 4,317</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="https://www.instagram.com/reel/DFC5xJsznJ2/" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/ee63e7c5-6d85-4e89-b582-867f24147ff2.png" alt="戶外交友軟體業配《Grass》" loading="lazy">
+        <div>
+          <h3>戶外交友軟體業配《Grass》</h3>
+          <ul><li>結合品牌資訊撰寫腳本</li><li>拍攝、配音與剪輯</li><li>搭配文案提升整體互動率</li></ul>
+          <p class="num">觀看 47,000+ ｜ 分享 101 ｜ 收藏 157</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="https://www.tiktok.com/@wonchunnz/video/7498513033031863570" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/6ad53028-1314-423a-8658-512e32888b02.png" alt="品牌官方企劃《寄送服務》" loading="lazy">
+        <div>
+          <h3>品牌官方企劃《寄送服務》</h3>
+          <ul><li>針對品牌核心設計腳本</li><li>強化品牌信任與服務印象</li><li>節奏優化，提升互動表現</li></ul>
+          <p class="num">觀看 23,000+ ｜ 收藏 99</p>
+        </div>
+      </a>
+
+      <a class="card card-link" href="https://www.instagram.com/p/DLw36XsR4FY/" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/e3ab3341-63b6-49e2-bad5-f19a6ae4acb0.png" alt="創作者影音剪輯《理財顧問》" loading="lazy">
+        <div>
+          <h3>創作者影音剪輯《理財顧問》</h3>
+          <ul><li>撰寫腳本並與業主溝通拍攝方向</li><li>提供配音口稿並依素材調整節奏</li><li>給予社群經營建議</li></ul>
+          <p class="num">觀看 3,000+（初期曝光）</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="film">
+      <div>
+        <h3>品牌春酒紀錄片《啟動大健康時代》</h3>
+        <p><strong>影片主軸：</strong>展現品牌進軍大健康產業的願景，詮釋企業邁向數位醫療與智能健康生活的未來藍圖。</p>
+        <p><strong>參與內容：</strong></p>
+        <ul>
+          <li>負責腳本撰寫，將抽象企業願景轉化為具象敘事</li>
+          <li>提出畫面分鏡建議，協助製作團隊掌握拍攝節奏與風格</li>
+          <li>規劃影片主軸方向與情感鋪陳，提升整體品牌說服力與團隊凝聚力</li>
+        </ul>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/UCDlieJIynk" title="品牌春酒紀錄片《啟動大健康時代》" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 產品行銷整合企劃 ========== -->
+  <section>
+    <h2>產品行銷整合企劃 <small>Product Manager</small></h2>
+    <p class="lead">從 0 到 1 推動上市流程，擔任命名、包裝設計方向、視覺拍攝與文案撰寫等關鍵角色，並規劃整體行銷推廣策略與平台露出，成功建立產品辨識度，並透過文宣增強銷售力道。</p>
+    <div class="cards">
+      <a class="product" href="https://www.starnic.com.tw/introduction/detail/88-Premium-Light-In-Facial-Essence" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/10381e1f-9a10-45f9-8507-02a74f38c73e.png" alt="星采光感喚白全能肌萃" loading="lazy">
+        <div>
+          <h3>星采光感喚白全能肌萃</h3>
+          <p>「Light-in」亮白新淨界，肌光保養全新升級！</p>
+          <p class="num">✔ 半年銷售 1.2 萬支　✔ 創造超過 3,000 萬業績</p>
+        </div>
+      </a>
+      <a class="product" href="https://www.starnic.com.tw/introduction/detail/95-Premium-Light-In-Sparkling-Complex" target="_blank" rel="noopener">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/78ff9ff9-ab85-44b0-a0c0-fdb31ec866ed.png" alt="星采光感雪亮錠" loading="lazy">
+        <div>
+          <h3>星采光感雪亮錠</h3>
+          <p>如果暗沉是你的天敵，「Light-in」光感全系列亮白助攻手！拋光加速器！</p>
+          <p class="num">✔ 半年銷售近 9,000 組　✔ 創造超過 2,200 萬+ 業績</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 社群圖文 ========== -->
+  <section>
+    <h2>社群圖文製作 <small>Social Media Graphics Creation</small></h2>
+    <div class="gal-grid">
+
+      <div class="gal">
+        <h3>醫美 / 美容</h3>
+        <p>結合熱門電影《關於我和鬼變成家人的那件事》的片名結構，轉化為《關於活樣泡泡亮白只要 999 的那件事》，讓促銷訊息更有記憶點與趣味性。</p>
+        <div class="imgs">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/21171e96-71d1-4a79-b02e-fe85cf5ce1e1.png" alt="醫美社群圖文 1" loading="lazy">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/35afafc7-8b84-4777-aacd-6a6b9e85e77b.png" alt="醫美社群圖文 2" loading="lazy">
+        </div>
+      </div>
+
+      <div class="gal">
+        <h3>牙醫</h3>
+        <p>我特別著重於「創意切角」與「時事結合」，讓本來比較嚴肅、專業的醫療資訊，也能用貼近生活、吸睛好懂的方式傳遞。</p>
+        <div class="imgs">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/af54b067-a183-46e0-bdc2-2784cb08cfa9.png" alt="牙醫社群圖文 1" loading="lazy">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/1438eced-9327-40c3-bfcc-accca6b77fdf.png" alt="牙醫社群圖文 2" loading="lazy">
+        </div>
+      </div>
+
+      <div class="gal">
+        <h3>復健科</h3>
+        <p>擅長以生活化語言撰寫健康科普內容，貼近不同年齡層家庭的需求與痛點。透過一問一答、迷思導正、行動建議等方式，讓專業內容更易理解、也更具溫度，有效提升社群共鳴與分享率。</p>
+        <div class="imgs">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/5fab25b3-8e4d-4da7-9123-8b33afd63fbf.png" alt="復健科社群圖文 1" loading="lazy">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/02378fb6-8af1-4924-ab55-6daff2ba4bd1.png" alt="復健科社群圖文 2" loading="lazy">
+        </div>
+      </div>
+
+      <div class="gal">
+        <h3>台灣食品進口商</h3>
+        <p>從主題、視覺風格到圖文設計與文案撰寫，皆依據品牌調性與消費者情境量身打造。內容設計兼顧創意與行銷，搭配活動檔期推進，有效提升品牌節慶氛圍與促購轉換。</p>
+        <div class="imgs">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/7ece15aa-d004-40ab-a9fb-c279d0d53406.png" alt="食品進口商社群圖文 1" loading="lazy">
+          <img src="https://images.cakeresume.com/O6gRaP/mikieyang/c060efba-31ee-4596-9399-77a230596991.png" alt="食品進口商社群圖文 2" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== 整合行銷企劃 ========== -->
+  <section class="campaign">
+    <h2>整合行銷企劃 <small>Campaign Project</small></h2>
+    <h3>新年專案｜好運 Buy 年・美麗大吉（2025/01/01 – 02/28）</h3>
+    <p>以「Buy 年」巧妙結合「拜年」諧音，打造具有節慶感與記憶點的行銷主題。統籌主題視覺、線上社群行銷、影音腳本製作與線下門市抽獎等活動執行，整合品牌聲量與導購轉換策略，打造兼具氛圍與銷售力的節慶行銷。</p>
+    <p class="highlight">活動期間共製作專屬活動頁，<strong class="n">成功累積 1,883 筆名單、401 位顧客到店消費</strong>（活動為期 2 個月），有效提升品牌曝光與參與率。</p>
+    <a class="btn" href="https://docs.google.com/presentation/d/1eUggLHMpa8dhuw91AqrGe5GQ90e1aZWs/edit?usp=drive_link" target="_blank" rel="noopener">查看專案簡報 →</a>
+  </section>
+
+  <!-- ========== 異業合作 ========== -->
+  <section>
+    <h2>異業合作 <small>Brand Partnership Activation</small></h2>
+    <div class="cols-2">
+      <div class="partner">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/b11be49a-ad54-41a5-ba42-2a6274d4edb2.png" alt="2022 新竹馬拉松" loading="lazy">
+        <h3>2022 新竹馬拉松</h3>
+        <h4>從星起跑｜健康美好生活嘉年華</h4>
+        <p>率領醫美業界首度跨界支持運動賽事，結合健康與美的理念，打造品牌專屬攤位活動，提升企業能見度與參與感。透過領跑儀式與現場互動，成功<strong class="n">獲得 27 篇新聞媒體報導</strong>，單日攤位<strong class="n">獲得 920 筆名單</strong>，擴大品牌影響力與潛在客群接觸。</p>
+      </div>
+      <div class="partner">
+        <img src="https://images.cakeresume.com/O6gRaP/mikieyang/0afc974e-e6ee-47ce-8f29-604fcb34aaf3.png" alt="2024 台北時裝週" loading="lazy">
+        <h3>2024 台北時裝週</h3>
+        <h4>FASHION FACE｜時尚美 成就自信</h4>
+        <p>品牌首次進駐信義街頭，以時尚美學結合醫美理念，透過創意多元的行銷策略，營造具視覺張力與動感氛圍的沉浸式體驗。活動期間成功<strong class="n">獲得 2,342 筆名單</strong>，有效拓展品牌觸及與潛在客群，開啟更多跨界合作可能。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>我是 Mikie，感謝您撥冗閱讀，期待有機會進一步聊聊。</p>
+  <p style="margin-top:8px"><a href="mailto:minchiy77@gmail.com">minchiy77@gmail.com</a></p>
+</footer>
+
+</body>
+</html>
